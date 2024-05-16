@@ -1,0 +1,248 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from seantheme.com/hud/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Jul 2022 09:36:57 GMT -->
+<head>
+<meta charset="utf-8" />
+<title>Sanly | Kriminalistika</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+
+<link href="{% static 'css/vendor.min.css' %}" rel="stylesheet" />
+<link href="{% static 'css/app.min.css' %}" rel="stylesheet" />
+
+
+<link href="{% static 'plugins/jvectormap-next/jquery-jvectormap.css' %}" rel="stylesheet" />
+<style>
+    
+</style>
+
+</head>
+<body>
+
+<div id="app" class="app">
+
+    {% include 'appbar_and_sidebar.html' %}
+
+
+<div id="content" class="app-content">
+    <div class="row">
+      <style>body {
+          margin: 0;
+          padding: 0;
+        }
+        
+        header h1 {
+          color: #fff;
+          padding: 20px;
+          text-align: center;
+          font-size: 100px;
+        }
+        
+        .container {
+          margin: 10px auto;
+          padding: 0 20px;
+        }
+        
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        
+        .card {
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          padding: 20px;
+          margin: 10px;
+          flex: 1 1 30%; /* Adjust the width of the cards as needed */
+          max-width: calc(33.33% - 20px); /* Adjust the max-width of the cards as needed */
+          background-image: url('img/dashbord/mobile-forensics.jpg'); /* Replace 'your-image-url.jpg' with the URL of your image */
+        background-size: cover;
+        background-position: center;
+        }
+        
+        .card h2 {
+          margin-top: 0;
+        }
+        </style>
+         <div class="container">
+  
+          <style>
+              .mybanner{
+                  /* height: 500px; */
+                  width: 100%;
+                  background-color: transparent;
+                  padding: 75px;
+                  /* margin-bottom: 50px; */
+              }
+           
+              pre{
+                background-color: transparent;
+              }
+          </style>
+          <div class="mybanner">
+              <h1 style="flex: 1;font-size: 75px;">SANLY KRIMINALISTIKA </h1> 
+        </div>
+        <div class="content">
+            <!-- Add any other content here -->
+          </div>
+  
+        </div>
+        <header>
+            <h2>Görnüşleri</h2>
+            <!-- Add any other header content here -->
+          </header>
+        
+      
+        <div class="container">
+          <div class="row">
+            {% if categories %}
+            {% for category in categories %}
+            <div class="card">
+              <a href="{% url 'item' category.id %}" class="menu-link">
+                <h2>{{category.name}}</h2>
+                <img src="{{category.img.url}}" alt="">
+              </a>
+            </div>
+            {% endfor %}
+            {% endif %}
+            
+            <style>
+              .card {
+                position: relative;
+                width: 300px; /* Adjust as needed */
+                transition: transform 0.3s;
+              }
+            
+              .card:hover {
+                transform: scale(1.1);
+              }
+            
+              .card img {
+                width: 100%;
+                height: auto;
+                display: block;
+              }
+            
+              .card h2 {
+                font-size: 16px;
+                margin: 10px 0;
+              }
+            
+              .card p {
+                font-size: 14px;
+                margin: 10px 0;
+              }
+            </style>
+            
+            
+            
+          </div>
+          </div>
+  </div>
+  </div>
+
+
+<a href="#" data-toggle="scroll-to-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+
+
+<div class="app-theme-panel">
+<div class="app-theme-panel-container">
+<a href="javascript:;" data-toggle="theme-panel-expand" class="app-theme-toggle-btn"><i class="bi bi-sliders"></i></a>
+<div class="app-theme-panel-content">
+<div class="small fw-bold text-white mb-1">Theme Color</div>
+<div class="card mb-3">
+
+<div class="card-body p-2">
+
+<div class="app-theme-list">
+<div class="app-theme-list-item"><a href="javascript:;" class="app-theme-list-link bg-pink" data-theme-class="theme-pink" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Pink">&nbsp;</a></div>
+<div class="app-theme-list-item"><a href="javascript:;" class="app-theme-list-link bg-red" data-theme-class="theme-red" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Red">&nbsp;</a></div>
+<div class="app-theme-list-item"><a href="javascript:;" class="app-theme-list-link bg-warning" data-theme-class="theme-warning" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Orange">&nbsp;</a></div>
+<div class="app-theme-list-item"><a href="javascript:;" class="app-theme-list-link bg-yellow" data-theme-class="theme-yellow" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Yellow">&nbsp;</a></div>
+<div class="app-theme-list-item"><a href="javascript:;" class="app-theme-list-link bg-lime" data-theme-class="theme-lime" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Lime">&nbsp;</a></div>
+<div class="app-theme-list-item"><a href="javascript:;" class="app-theme-list-link bg-green" data-theme-class="theme-green" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Green">&nbsp;</a></div>
+<div class="app-theme-list-item active"><a href="javascript:;" class="app-theme-list-link bg-teal" data-theme-class="" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Default">&nbsp;</a></div>
+<div class="app-theme-list-item"><a href="javascript:;" class="app-theme-list-link bg-info" data-theme-class="theme-info" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Cyan">&nbsp;</a></div>
+<div class="app-theme-list-item"><a href="javascript:;" class="app-theme-list-link bg-primary" data-theme-class="theme-primary" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Blue">&nbsp;</a></div>
+<div class="app-theme-list-item"><a href="javascript:;" class="app-theme-list-link bg-purple" data-theme-class="theme-purple" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Purple">&nbsp;</a></div>
+<div class="app-theme-list-item"><a href="javascript:;" class="app-theme-list-link bg-indigo" data-theme-class="theme-indigo" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Indigo">&nbsp;</a></div>
+<div class="app-theme-list-item"><a href="javascript:;" class="app-theme-list-link bg-gray-100" data-theme-class="theme-gray-200" data-toggle="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Gray">&nbsp;</a></div>
+</div>
+
+</div>
+
+
+<div class="card-arrow">
+<div class="card-arrow-top-left"></div>
+<div class="card-arrow-top-right"></div>
+<div class="card-arrow-bottom-left"></div>
+<div class="card-arrow-bottom-right"></div>
+</div>
+
+</div>
+<div class="small fw-bold text-white mb-1">Theme Cover</div>
+<div class="card">
+
+<div class="card-body p-2">
+
+<div class="app-theme-cover">
+<div class="app-theme-cover-item active">
+<a href="javascript:;" class="app-theme-cover-link" style="background-image: url(assets/img/cover/cover-thumb-1.jpg);" data-theme-cover-class="" data-toggle="theme-cover-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Default">&nbsp;</a>
+</div>
+<div class="app-theme-cover-item">
+<a href="javascript:;" class="app-theme-cover-link" style="background-image: url(assets/img/cover/cover-thumb-2.jpg);" data-theme-cover-class="bg-cover-2" data-toggle="theme-cover-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Cover 2">&nbsp;</a>
+</div>
+<div class="app-theme-cover-item">
+<a href="javascript:;" class="app-theme-cover-link" style="background-image: url(assets/img/cover/cover-thumb-3.jpg);" data-theme-cover-class="bg-cover-3" data-toggle="theme-cover-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Cover 3">&nbsp;</a>
+</div>
+<div class="app-theme-cover-item">
+<a href="javascript:;" class="app-theme-cover-link" style="background-image: url(assets/img/cover/cover-thumb-4.jpg);" data-theme-cover-class="bg-cover-4" data-toggle="theme-cover-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Cover 4">&nbsp;</a>
+</div>
+<div class="app-theme-cover-item">
+<a href="javascript:;" class="app-theme-cover-link" style="background-image: url(assets/img/cover/cover-thumb-5.jpg);" data-theme-cover-class="bg-cover-5" data-toggle="theme-cover-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Cover 5">&nbsp;</a>
+</div>
+</div>
+
+</div>
+
+
+<div class="card-arrow">
+<div class="card-arrow-top-left"></div>
+<div class="card-arrow-top-right"></div>
+<div class="card-arrow-bottom-left"></div>
+<div class="card-arrow-bottom-right"></div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+<script data-cfasync="false" src="{% static 'js/email-decode.min.js' %}"></script>
+<script src="{% static 'js/vendor.min.js' %}" type="a974b7e0a2eb8b3457f79d91-text/javascript"></script>
+<script src="{% static 'js/app.min.js' %}" type="a974b7e0a2eb8b3457f79d91-text/javascript"></script>
+
+
+<script src="{% static 'plugins/jvectormap-next/jquery-jvectormap.min.js' %}" type="3a2c04e4bdfe96c74a1f73a2-text/javascript"></script>
+<script src="{% static 'plugins/jvectormap-content/world-mill.js' %}" type="3a2c04e4bdfe96c74a1f73a2-text/javascript"></script>
+<script src="{% static 'plugins/apexcharts/dist/apexcharts.min.js' %}" type="3a2c04e4bdfe96c74a1f73a2-text/javascript"></script>
+
+<script src="{% static 'plugins/masonry-layout/dist/masonry.pkgd.min.js' %}" type="a974b7e0a2eb8b3457f79d91-text/javascript"></script>
+<script src="{% static 'plugins/chart.js/dist/chart.min.js' %}" type="a974b7e0a2eb8b3457f79d91-text/javascript"></script>
+<script src="{% static 'plugins/moment/min/moment.min.js' %}" type="a974b7e0a2eb8b3457f79d91-text/javascript"></script>
+<script src="{% static 'plugins/bootstrap-daterangepicker/daterangepicker.js' %}" type="a974b7e0a2eb8b3457f79d91-text/javascript"></script>
+<script src="{% static 'js/demo/analytics.demo.js' %}" type="a974b7e0a2eb8b3457f79d91-text/javascript"></script>
+<script src="{% static 'js/demo/dashboard.demo.js' %}" type="6f262e7b5607d3f572fce94d-text/javascript"></script>
+
+<script src="{% static 'js/rocket-loader.min.js' %}" data-cf-settings="a974b7e0a2eb8b3457f79d91-|49" defer=""></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"72ca3c83ce193c94","version":"2022.6.0","r":1,"token":"4db8c6ef997743fda032d4f73cfeff63","si":100}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from seantheme.com/hud/analytics.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Jul 2022 09:38:19 GMT -->
+</html>
